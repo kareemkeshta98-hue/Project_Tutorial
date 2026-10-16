@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <td>
+            <a href="{% url 'index' %}">Home</a>
+        </td>
+
+        <td>
+            <a href="{% url 'About' %}">About</a>
+        </td>
+
+        <td>
+            <a href="{% url 'products' %}">Products</a>
+        </td>
+
+        <td>
+            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" style="background:none;border:none;color:blue;text-decoration:underline;cursor:pointer;padding:0;font:inherit;">Logout</button>
+            </form>
+        </td>
+    </tr>
+</table>
